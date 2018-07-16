@@ -38,11 +38,11 @@ class GoogleDailyReader(_DailyBaseReader):
                                                 retry_count, pause, session,
                                                 chunksize)
 
+    """Get current google quote"""
+
     @property
     def url(self):
-        """API URL"""
-        # Thanks user:vnmabus for pointing this out.
-        return 'https://finance.google.co.uk/bctzjpnsun/historical'
+        return 'http://www.google.com/finance/info'
 
     def _get_params(self, symbol):
         params = {
